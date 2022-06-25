@@ -1,0 +1,106 @@
+@use "custom" as *;
+
+@mixin transition{
+    transition: all 0.3s ease-in-out;
+
+}
+body{
+    background: $very-dark-blue;
+    color: $white;
+    font-family: 'Overpass', sans-serif;
+}
+p{
+    font-size: 15px;
+    color: $light-grey;
+}
+.rating-container{
+    background-color: $dark-blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    max-width: 500px;
+    overflow: hidden;
+}
+.dial{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #1c232b;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.rating-star{
+    background-image: url(images/icon-star.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    @include transition;
+    &:hover{
+        background-color: $very-dark-blue;
+    }
+}
+.info{
+    margin: 1rem 0;
+    h1{
+        text-align: center;
+    }
+}
+.rating-dials{
+    display: flex;
+    justify-content: center;
+}
+.dial-item{
+    margin: 0 0.5rem;
+    button{
+        color: $light-grey;
+    }
+    @include transition;
+    &:hover:not(.active){
+        background-color: $orange;
+        button{
+            color: $white;
+        }
+    }
+}
+.submit-btn{
+    color: $white;
+    background-color: $orange;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    @include transition;
+    &:hover{
+        background-color: $white;
+        color: $orange;
+    }
+}
+
+/* THANKS OVERLAY */
+
+.thanks-overlay{
+    text-align: center;
+}
+.selection{
+    margin-top: 2rem;
+    background-color: #1c232b;
+    color: $orange;
+    padding-top: 0.25rem;
+    font-style: italic;
+    transform: translateX(-400%);
+    transition: all 1s ease-in;
+}
+.thanks-info{
+    margin-top: 1rem;
+}
+
+
+/* EVENTS  */
+.active{
+    background-color: $medium-grey;
+    button{
+        color: $white;
+    }
+}
+.hide-overlay{
+    display: none;
+}
