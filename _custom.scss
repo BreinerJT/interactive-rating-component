@@ -1,0 +1,30 @@
+$orange: hsl(25, 97%, 53%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$border-radius-sm:            1rem;
+
+//OVERRIDING BUTTONS
+
+$btn-box-shadow:              none;
+$btn-focus-width:             none;
+$btn-focus-box-shadow:        none;
+$btn-active-box-shadow:       none;
+
+
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
